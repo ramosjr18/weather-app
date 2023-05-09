@@ -6,7 +6,7 @@ import { MyWeatherService } from '../../services/my-weather.service';
   templateUrl: './weather-info-main-page.component.html',
   styles: [],
 })
-export class WeatherInfoMainPageComponent implements OnInit {
+export  class WeatherInfoMainPageComponent implements OnInit {
   // ! ATTRIBUTES:
   // * timeline array will hold the time and corresponding temperature for the whole day (that means, 8 different forecasts, because it is every three hours. 8*3 = 24):
   timelineForOneDay: any = [];
@@ -24,7 +24,7 @@ export class WeatherInfoMainPageComponent implements OnInit {
 
   // ! CONSTRUCTOR:
 
-  constructor(private myWeatherService: MyWeatherService) {}
+  constructor(public myWeatherService: MyWeatherService) {}
   // ! ON INIT:
 
   ngOnInit(): void {
