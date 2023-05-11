@@ -5,14 +5,126 @@ body {
   background-size: cover;
   text-transform: capitalize;
 }
-img {
-  width: 120px;
-  height: 120px;
+
+.infocard{
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 93.5%;
+  margin: 3%;
+  border-radius: 15px;
 }
 
-.sidebar-container {
-  /* height: 100vh; */
-  /* width: 250px; */
+.navbar{
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+}
+
+.shared-search-bar{
+  border-radius: 10px;
+  width: 500px;
+  height: 40px;
+}
+
+.topcont{
+  display: flex;
+  width: 100%;
+  height: 300px;
+}
+
+.currentlocation{
+  text-align: center;
+  height: 100%;
+  width: 33.33%;
+  color: white;
+}
+
+.currentmain{
+  text-align: center;
+  margin: 2%;
+  margin-top: 80px;
+}
+
+.currentbutton{
+  margin-top: 15px;
+  margin-left: 50%;
+}
+
+.currentlocation  button{
+  width: 50px;
+  height: 40px;
+  border: none;
+  color: white;
+}
+
+.buttonleft{
+  background-color: #49319D;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.buttonright{
+  background-color: rgba(72, 49, 157, 0.2);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.currentlocation img{
+  width: 40px;
+  height: 40px;
+}
+
+.forecast{
+  display: flex;
+}
+
+.infotitle{
+  color: white;
+}
+
+.sensinfo{
+  display: flex;
+  flex-wrap: wrap;
+  width: 40%;
+  height: 400px;
+}
+
+.sensrow{
+  width: 164px;
+  height: 164px;
+  margin: 5px;
+  margin-left: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(72, 49, 157, 0.2);
+  border-radius: 22px;
+}
+
+.forecastinfo{
+  width: 60%;
+}
+
+.hourscast{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.castcard{
+  background-color: rgba(72, 49, 157, 0.2);
+  color: white;
+  width: 55px;
+  height: 120px;
+  margin: 5px;
+  border-radius: 50px;
+}
+
+.forecastimg{
+  width: 39.38px;
+  height: 39.38px;
+}
+
+img {
+  width: 100px;
+  height: 100px;
 }
 
 .three-day-con {

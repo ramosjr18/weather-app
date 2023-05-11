@@ -1,18 +1,14 @@
-<div class="d-flex flex-wrap">
-  <div
-    *ngFor="let item of timelineForOneDay"
-    class="card text-bg-light m-2"
-    style="max-width: 10rem"
-  >
-    <div class="card-header">
+<div class="hourscast">
+  <div *ngFor="let item of timelineForOneDay" class="castcard" style="max-width: 10rem">
+    <div class="">
       {{ item.time | date : "HH:mm" }}
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">{{ item.temp | number : "1.0-0" }}°C</h5>
-      <img class="img-size" src="{{ item.icon | weatherImg }}" alt="" />
-      <p class="card-text">
+      <br>
+      <img class="forecastimg" src="{{ item.icon | weatherImg }}" alt="" />
+      <br>
+      <h5 class="foretemp">{{ item.temp | number : "1.0-0" }}°C</h5>
+      <!-- <p class="card-text">
         {{ item.conditions }}
-      </p>
+      </p> -->
     </div>
   </div>
 </div>
