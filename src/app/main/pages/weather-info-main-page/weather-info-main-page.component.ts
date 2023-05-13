@@ -64,7 +64,6 @@ export  class WeatherInfoMainPageComponent implements OnInit {
     // ? error that i did not get:
     start.setHours(start.getHours() + start.getTimezoneOffset() / 60);
     // ? --------
-
     const to = new Date(start);
     to.setHours(to.getHours() + 2, to.getMinutes() + 59, to.getSeconds() + 59);
     return { start, to };
@@ -74,7 +73,7 @@ export  class WeatherInfoMainPageComponent implements OnInit {
   getTodayForecast(info: any) {
     this.location = info.city;
     // * we'll look through the list and slice the data so we can get just the first 8 elements:
-    for (const forecast of info.list.slice(0, 8)) {
+    for (const forecast of info.list.slice(0, 7)) {
       console.log('forecast =>', forecast);
       // * here we are pushing specific info fro  list into timelineForOneDay:
       this.timelineForOneDay.push({
@@ -118,7 +117,7 @@ export  class WeatherInfoMainPageComponent implements OnInit {
   }
 
   getFiveDayForecast(info: any) {
-    for (let i = 0; i < info.length; i = i + 8) {
+    for (let i = 0; i < info.length; i = i + 6) {
       this.fetched5dayWeatherData.push(info[i]);
     }
 

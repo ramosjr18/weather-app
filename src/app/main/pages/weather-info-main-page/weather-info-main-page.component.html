@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-sm" data-bs-theme="dark">
   <div class="container-fluid">
     <div class="logo">
-      <a class="navbar-brand" routerLink="home"><img src="../../../../assets/icons/nubelogo.png" alt="logo"
-          style="width: 50px; height: 50px;"></a>
+      <a class="navbar-brand" routerLink="home"><img src="../../../../assets/icons/nubladologo.png" alt="logo"
+          style="width: 30px; height: 30px;"></a>
     </div>
 
     <div class="searchbarCont">
@@ -55,18 +55,22 @@
     <!-- * MAIN-HEADING -->
     <div class="">
       <div class="topcont">
-        <div class="currentlocation currentmain">
-          <h1>{{ location.name }}</h1>
-          <h3>{{ weatherNow.main.temp | number : "1.0-0" }} °C</h3>
-          <div class="condition">
-            <img src="../../../../assets/icons/nubelogo.png" alt="">
-            <p class=""> {{ weatherNow.weather![0].main }}</p>
+        <div class="allcont">
+          <div class="currentlocation currentmain">
+            <h1>{{ location.name }}</h1>
+            <h3>{{ weatherNow.main.temp | number : "1.0-0" }} °C</h3>
+            <div class="condition">
+              <img src="../../../../assets/icons/nubladologo.png" alt="">
+              <p class=""> {{ weatherNow.weather![0].main }}</p>
+            </div>
           </div>
-        </div>
-        <div class="currentlocation"></div>
-        <div class="currentlocation currentbutton">
-          <button class="buttonleft">°C</button>
-          <button class="buttonright">°F</button>
+          <div class="currentlocationblank">
+            <img src="../../../../assets/images/Captura de pantalla 2023-05-13 a la(s) 23.15.51.png" alt="Maps" style="width: 90%; height: 90%; border-radius: 15px; margin: 9px;">
+          </div>
+          <div class="currentbutton">
+            <button class="buttonleft">°C</button>
+            <button class="buttonright">°F</button>
+          </div>
         </div>
       </div>
       <!-- <div class="p-3">{{ currentTime | date : "EEEE dd MMMM, HH:mm" }}</div> -->
@@ -85,16 +89,44 @@
     <div class="forecast">
 
       <div class="sensinfo">
-        <div class="sensrow">Feels Like</div>
-        <div class="sensrow">Humidity</div>
-        <div class="sensrow">Visibility</div>
-        <div class="sensrow">Wind</div>
+        <div class="sensrow">
+          <p><img src="../../../../assets/icons/termometro.png" alt="termometer logo image"
+              style="height: 27px; width: 27px;"> FEELS LIKE</p>
+          <h5 class="sensletter">
+            {{ weatherNow.main.feels_like | number : "1.0-0" }} °C
+          </h5>
+        </div>
+        <div class="sensrow">
+          <p><img src="../../../../assets/icons/gota-de-liquido.png" alt="Drop logo image"
+              style="height: 27px; width: 27px;"> HUMIDITY</p>
+          <h5 class="sensletter">
+            {{ weatherNow.main.humidity }} %
+          </h5>
+        </div>
+        <div class="sensrow">
+          <p><img src="../../../../assets/icons/ver.png" alt="Eye logo image" style="height: 27px; width: 27px;">
+            VISIBILITY</p>
+          <h5 class="sensletter">
+            {{ weatherNow.visibility | number : "1.0-0" }} km
+          </h5>
+        </div>
+        <div class="sensrow">
+          <P><img src="../../../../assets/icons/viento.png" alt="Wind logo image" style="height: 27px; width: 27px;">
+            WIND</P>
+          <h5 class="sensletter">
+            {{ weatherNow.wind.speed | number : "1.0-0" }} km/h
+          </h5>
+        </div>
       </div>
 
       <div class="forecastinfo">
         <h4 class="infotitle">Forecast</h4>
         <div class="row">
           <app-three-day-forecast [timelineForOneDay]="timelineForOneDay"></app-three-day-forecast>
+        </div>
+        <br><br>
+        <div class="row">
+          <app-five-day-forecast [fetched5dayWeatherData]="fetched5dayWeatherData"></app-five-day-forecast>
         </div>
       </div>
 

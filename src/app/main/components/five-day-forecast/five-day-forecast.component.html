@@ -1,4 +1,4 @@
-<table class="table">
+<!-- <table class="table" style="color: white;">
   <thead>
     <tr>
       <th scope="col">Temperature</th>
@@ -11,11 +11,7 @@
     <tr *ngFor="let forecast of fetched5dayWeatherData">
       <td>
         {{ forecast.main.temp | number : "1.0-0" }} °C
-        <img
-          class="img-size"
-          src="{{ forecast.weather![0].icon | weatherImg }}"
-          alt=""
-        />
+        <img class="img-size" src="{{ forecast.weather![0].icon | weatherImg }}" alt="" />
       </td>
       <td>{{ forecast.weather![0].main }}</td>
       <td>
@@ -26,4 +22,15 @@
       </td>
     </tr>
   </tbody>
-</table>
+</table> -->
+
+<div class="hourscast">
+  <div *ngFor="let forecast of fetched5dayWeatherData" class="castcard" style="max-width: 10rem">
+    <div>
+      {{ forecast.dt_txt | date : "EEE" }}
+      <br>
+      <img class="forecastimg" src="{{ forecast.weather![0].icon | weatherImg }}" alt="" />
+      <h5>{{ forecast.main.temp | number : "1.0-0" }} °C</h5>
+    </div>
+  </div>
+</div>

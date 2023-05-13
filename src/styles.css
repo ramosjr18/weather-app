@@ -6,89 +6,112 @@ body {
   text-transform: capitalize;
 }
 
-.infocard{
+.infocard {
   background-color: rgba(0, 0, 0, 0.8);
   width: 93.5%;
   margin: 3%;
   border-radius: 15px;
 }
 
-.navbar{
+.navbar {
   margin: 0;
   background-color: rgba(0, 0, 0, 0.8);
   width: 100%;
 }
 
-.shared-search-bar{
+.shared-search-bar {
   border-radius: 10px;
   width: 500px;
   height: 40px;
 }
 
-.topcont{
+.topcont {
   display: flex;
   width: 100%;
   height: 300px;
 }
 
-.currentlocation{
+.allcont {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+
+.currentlocation {
+  display: block;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   height: 100%;
-  width: 33.33%;
+  width: 46.33%;
   color: white;
+  padding-top: 6%;
 }
 
-.currentmain{
-  text-align: center;
-  margin: 2%;
-  margin-top: 80px;
+.currentlocationblank {
+  width: 40.33%;
 }
 
-.currentbutton{
-  margin-top: 15px;
-  margin-left: 50%;
+.currentbutton {
+  padding: 9px;
+  display: flex;
+  justify-content: end;
+  width: 13.33%;
 }
 
-.currentlocation  button{
+.currentbutton button {
   width: 50px;
   height: 40px;
   border: none;
   color: white;
 }
 
-.buttonleft{
+.buttonleft {
   background-color: #49319D;
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
 }
 
-.buttonright{
+.buttonright {
   background-color: rgba(72, 49, 157, 0.2);
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
 
-.currentlocation img{
+.currentlocation img {
   width: 40px;
   height: 40px;
 }
 
-.forecast{
+.forecast {
   display: flex;
 }
 
-.infotitle{
+.infotitle {
   color: white;
 }
 
-.sensinfo{
+.sensinfo {
   display: flex;
   flex-wrap: wrap;
   width: 40%;
   height: 400px;
+  margin-left: 6%;
 }
 
-.sensrow{
+.sensletter {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: -0.408px;
+  color: #FFFFFF;
+
+}
+
+.sensrow {
   width: 164px;
   height: 164px;
   margin: 5px;
@@ -98,37 +121,29 @@ body {
   border-radius: 22px;
 }
 
-.forecastinfo{
-  width: 60%;
+.forecastinfo {
+  width: 59%;
+  margin-left: 6%;
 }
 
-.hourscast{
+.hourscast {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 
-.castcard{
+.castcard {
   background-color: rgba(72, 49, 157, 0.2);
   color: white;
-  width: 55px;
-  height: 120px;
-  margin: 5px;
+  width: 60px;
+  height: 130px;
+  margin: 5.5px;
+  padding-top: 20px;
   border-radius: 50px;
+  text-align: center;
 }
 
-.forecastimg{
+.forecastimg {
   width: 39.38px;
   height: 39.38px;
-}
-
-img {
-  width: 100px;
-  height: 100px;
-}
-
-.three-day-con {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
 }
