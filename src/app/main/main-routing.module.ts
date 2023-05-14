@@ -4,6 +4,7 @@ import { MainLayoutComponent } from './pages/main-layout/main-layout.component';
 import { WeatherInfoMainPageComponent } from './pages/weather-info-main-page/weather-info-main-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { TeamComponent } from './pages/team-page/team.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,7 @@ const routes: Routes = [
       { path: 'weather-info', component: WeatherInfoMainPageComponent },
       { path: 'about', component: AboutPageComponent },
       { path: 'contact', component: ContactPageComponent },
+      { path: 'team', component: TeamComponent},
 
       { path: '**', redirectTo: 'weather-info' },
     ],

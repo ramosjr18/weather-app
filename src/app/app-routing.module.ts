@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutPageComponent } from './main/pages/about-page/about-page.component';
 import { ContactPageComponent } from './main/pages/contact-page/contact-page.component';
 import { Error404PageComponent } from './shared/pages/error404-page/error404-page.component';
+import { TeamComponent } from './main/pages/team-page/team.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'about-page',
     component: AboutPageComponent,
+  },
+  {
+    path: 'team',
+    component: TeamComponent,
   },
   {
     path: 'contact-page',

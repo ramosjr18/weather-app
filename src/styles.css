@@ -3,6 +3,9 @@
 body {
   background-image: url(assets/images/snow.svg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   text-transform: capitalize;
 }
 
@@ -21,6 +24,7 @@ body {
 
 .shared-search-bar {
   border-radius: 10px;
+  border: none;
   width: 500px;
   height: 40px;
 }
@@ -146,4 +150,30 @@ body {
 .forecastimg {
   width: 39.38px;
   height: 39.38px;
+}
+
+
+/* Team css */
+
+.teamscont {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.teamnames {
+  background-color: #48319dd2;
+  color: white;
+  width: 200px;
+  height: 300px;
+  border-radius: 22px;
+  margin: 15px;
+  text-align: center;
+}
+
+.teaminfobutton {
+  color: white;
+  background-color: #3d2885;
+  border-radius: 7px;
 }
