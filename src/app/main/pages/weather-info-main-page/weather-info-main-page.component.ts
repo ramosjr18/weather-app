@@ -78,23 +78,6 @@ export class WeatherInfoMainPageComponent implements OnInit {
     }
   }
 
-  searchByCity(city: string) {
-    console.log('capital being searched: ', city);
-
-    this.myWeatherService.getWeatherByCityName(city).subscribe((data) => {
-      this.weatherData = data;
-
-      console.log('fetched info =>', data);
-      this.weatherNow = false;
-      this.timelineForOneDay = [];
-      this.fetched5dayWeatherData = [];
-
-      this.getTodayForecast(this.weatherData);
-
-      this.getFiveDayForecast(this.weatherData.list);
-    });
-  }
-
   getFiveDayForecast(info: any) {
     for (let i = 0; i < info.length; i = i + 6) {
       this.fetched5dayWeatherData.push(info[i]);
