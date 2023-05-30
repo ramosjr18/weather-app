@@ -20,8 +20,7 @@ export class WeatherInfoMainPageComponent implements OnInit {
 
   // ! CONSTRUCTOR:
   constructor(
-    public myWeatherService: MyWeatherService,
-    private sharedSearchService: SharedSearchService
+    public myWeatherService: MyWeatherService
   ) {}
 
   // ! ON INIT:
