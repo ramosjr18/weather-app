@@ -25,7 +25,8 @@
             </div>
           </div>
           <div class="currentlocationblank">
-            <img src="../../../../assets/images/Captura de pantalla 2023-05-13 a la(s) 23.15.51.png" alt="Maps" style="width: 90%; height: 90%; border-radius: 15px; margin: 9px;">
+            <img src="../../../../assets/images/Captura de pantalla 2023-05-13 a la(s) 23.15.51.png" alt="Maps"
+              style="width: 90%; height: 90%; border-radius: 15px; margin: 9px;">
           </div>
           <div class="currentbutton">
             <button class="buttonleft">°C</button>
@@ -55,6 +56,10 @@
           <h5 class="sensletter">
             {{ weatherNow.main.feels_like | number : "1.0-0" }} °C
           </h5>
+          <br>
+          <p id="feels">
+            {{this.getFeelDesc()}}
+          </p>
         </div>
         <div class="sensrow">
           <p><img src="../../../../assets/icons/gota-de-liquido.png" alt="Drop logo image"
@@ -62,13 +67,20 @@
           <h5 class="sensletter">
             {{ weatherNow.main.humidity }} %
           </h5>
+          <br>
+          <p id="humidity">
+            {{ this.getHumidityDesc()}}
+          </p>
         </div>
         <div class="sensrow">
           <p><img src="../../../../assets/icons/ver.png" alt="Eye logo image" style="height: 27px; width: 27px;">
             VISIBILITY</p>
           <h5 class="sensletter">
             {{ weatherNow.visibility /1000 | number : "1.0-0" }} km
-          </h5>
+          </h5><br>
+          <p id="visibility">
+            {{ this.getVisibilityDesc()}}
+          </p>
         </div>
         <div class="sensrow">
           <P><img src="../../../../assets/icons/viento.png" alt="Wind logo image" style="height: 27px; width: 27px;">
@@ -76,6 +88,10 @@
           <h5 class="sensletter">
             {{ weatherNow.wind.speed | number : "1.0-0" }} km/h
           </h5>
+          <br>
+          <p id="wind">
+            {{ this.getWindDesc()}}
+          </p>
         </div>
       </div>
 

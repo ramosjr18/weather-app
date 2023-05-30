@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MyWeatherService } from '../../services/my-weather.service';
-import { SharedSearchService } from 'src/app/shared-search.service.service';
 
 @Component({
   selector: 'app-weather-info-main-page',
@@ -17,11 +16,12 @@ export class WeatherInfoMainPageComponent implements OnInit {
   longitude?: number;
   weatherData: any;
   fetched5dayWeatherData: any = [];
+  HumidityDesc!: string;
 
   // ! CONSTRUCTOR:
   constructor(
     public myWeatherService: MyWeatherService
-  ) {}
+  ) { }
 
   // ! ON INIT:
   ngOnInit(): void {
@@ -87,4 +87,66 @@ export class WeatherInfoMainPageComponent implements OnInit {
       this.fetched5dayWeatherData
     );
   }
+
+  getHumidityDesc() {
+    const humidity = this.weatherNow.main.humidity;
+    const messageElement = document.getElementById('humidity');
+    if (messageElement) {
+      if (humidity < 30) {
+        messageElement.textContent = 'Humidity is low.';
+      } else if (humidity >= 30 && humidity <= 70) {
+        messageElement.textContent = 'Humidity is moderate.';
+      } else {
+        messageElement.textContent = 'Humidity is high.';
+      }
+    }
+  }
+
+  getWindDesc() {
+    const wind = this.weatherNow.wind.speed;
+    const messageElement = document.getElementById('wind');
+    if (messageElement) {
+      if (wind < 10) {
+        messageElement.textContent = 'Wind is calm.';
+      } else if (wind >= 10 && wind <= 20) {
+        messageElement.textContent = 'Wind is light.';
+      } else {
+        messageElement.textContent = 'Wind is strong.';
+      }
+    }
+  }
+
+  getFeelDesc() {
+    const feels = this.weatherNow.main.feels_like;
+    const messageElement = document.getElementById('feels');
+    if (messageElement) {
+      if (feels < 10) {
+        messageElement.textContent = 'Feels very cold.';
+      } else if (feels >= 10 && feels < 20) {
+        messageElement.textContent = 'Feels cool.';
+      } else if (feels >= 20 && feels < 30) {
+        messageElement.textContent = 'Feels warm.';
+      } else {
+        messageElement.textContent = 'Feels hot.';
+      }
+    }
+  }
+
+  getVisibilityDesc() {
+    const visibility = this.weatherNow.visibility;
+    const messageElement = document.getElementById('visibility');
+    if (messageElement) {
+      if (visibility < 1) {
+        messageElement.textContent = 'Visibility is very low.';
+      } else if (visibility >= 1 && visibility < 5) {
+        messageElement.textContent = 'Visibility is low.';
+      } else if (visibility >= 5 && visibility < 10) {
+        messageElement.textContent = 'Visibility is moderate.';
+      } else {
+        messageElement.textContent = 'Visibility is high.';
+      }
+
+    }
+  }
 }
+
