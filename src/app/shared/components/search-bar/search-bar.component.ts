@@ -11,7 +11,7 @@ export class SearchBarComponent {
   @Output()
   public onValue = new EventEmitter<string>();
 
-  valueEmitter(keyword: string): void {
+  searchByCity(keyword: string): void {
     this.onValue.emit(keyword);
   }
 }

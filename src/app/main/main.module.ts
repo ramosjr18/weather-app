@@ -11,6 +11,7 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { MainCardComponent } from './components/main-card/main-card.component';
 import { ThreeDayForecastComponent } from './components/three-day-forecast/three-day-forecast.component';
 import { FiveDayForecastComponent } from './components/five-day-forecast/five-day-forecast.component';
+import { TeamComponent } from './pages/team-page/team.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FiveDayForecastComponent } from './components/five-day-forecast/five-da
     MainCardComponent,
     ThreeDayForecastComponent,
     FiveDayForecastComponent,
+    TeamComponent,
   ],
   imports: [CommonModule, MainRoutingModule, SharedModule, HttpClientModule],
 })
