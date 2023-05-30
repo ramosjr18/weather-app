@@ -78,7 +78,7 @@ export class WeatherInfoMainPageComponent implements OnInit {
   }
 
   getFiveDayForecast(info: any) {
-    for (let i = 0; i < info.length; i = i + 6) {
+    for (let i = 0; i < info.length; i = i + 8) {
       this.fetched5dayWeatherData.push(info[i]);
     }
 
