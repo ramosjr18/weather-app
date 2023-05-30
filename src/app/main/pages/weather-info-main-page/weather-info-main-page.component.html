@@ -67,7 +67,7 @@
           <p><img src="../../../../assets/icons/ver.png" alt="Eye logo image" style="height: 27px; width: 27px;">
             VISIBILITY</p>
           <h5 class="sensletter">
-            {{ weatherNow.visibility | number : "1.0-0" }} km
+            {{ weatherNow.visibility /1000 | number : "1.0-0" }} km
           </h5>
         </div>
         <div class="sensrow">
