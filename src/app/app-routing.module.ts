@@ -4,6 +4,7 @@ import { AboutPageComponent } from './main/pages/about-page/about-page.component
 import { ContactPageComponent } from './main/pages/contact-page/contact-page.component';
 import { Error404PageComponent } from './shared/pages/error404-page/error404-page.component';
 import { TeamComponent } from './main/pages/team-page/team.component';
+import { TechComponent } from './main/pages/tech/tech.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'contact-page',
     component: ContactPageComponent,
+  },
+  {
+    path: 'app-tech-page',
+    component: TechComponent,
   },
   {
     path: '404',
