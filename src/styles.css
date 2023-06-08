@@ -177,3 +177,28 @@ body {
   background-color: #3d2885;
   border-radius: 7px;
 }
+
+.todocontact {
+  display: flex;
+  justify-content: space-evenly;
+  height: 80%;
+}
+
+.contentcontact {
+  width: 45%;
+  margin: 0.5%;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px white solid;
+  width: 100%;
+}
+
+textarea {
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px white solid;
+  width: 100%;
+}
